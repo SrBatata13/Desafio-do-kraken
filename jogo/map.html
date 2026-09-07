@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="stylesheet" href="map.css">
+
+    <title>Desafio do Kraken</title>
+</head>
+
+
+<body>
+
+    <div class="geral">
+
+        <div class="podio">
+
+            <!-- 1º LUGAR -->
+            <div
+                class="posicao"
+                data-posicao="1"
+            >
+
+                <img
+                    class="medalha"
+                    src="../assets/primeiro.png"
+                    alt="1º lugar"
+                >
+
+                <div class="bandeira">
+
+                    <span class="pontos">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- 2º LUGAR -->
+            <div
+                class="posicao"
+                data-posicao="2"
+            >
+
+                <img
+                    class="medalha"
+                    src="../assets/segundo.png"
+                    alt="2º lugar"
+                >
+
+                <div class="bandeira">
+
+                    <span class="pontos">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- 3º LUGAR -->
+            <div
+                class="posicao"
+                data-posicao="3"
+            >
+
+                <img
+                    class="medalha"
+                    src="../assets/terceiro.png"
+                    alt="3º lugar"
+                >
+
+                <div class="bandeira">
+
+                    <span class="pontos">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- 4º LUGAR -->
+            <div
+                class="posicao"
+                data-posicao="4"
+            >
+
+                <img
+                    class="medalha"
+                    src="../assets/quarto.png"
+                    alt="4º lugar"
+                >
+
+                <div class="bandeira">
+
+                    <span class="pontos">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="timer">
+        03:00:00
+    </div>
+
+    <div class="layout">
+
+        <div class="personagem">
+
+            <img
+                src="../assets/kraken.png"
+                alt="Kraken"
+            >
+
+        </div>
+
+        <div class="area-desafio">
+
+            <h1>
+                DESAFIO:
+            </h1>
+
+            <div id="loading">
+
+                <img
+                    src="../assets/navio-e-barco-imagem-animada-0031.gif"
+                    alt="Carregando..."
+                >
+
+                <h1>
+                    carregando...
+                </h1>
+
+            </div>
+            <div id="desafioContainer">
+
+                <p id="desafioTexto"></p>
+
+                <h2 id="valorPonto">
+                    0 moedas
+                </h2>
+
+            </div>
+
+            <div class="botoes">
+
+                <button id="botaoFeito">
+                    FEITO 😁
+                </button>
+
+                <button id="botaoRecusar">
+                    RECUSAR
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="sua_pontuação">
+
+        <img
+            id="brasaoJogador"
+            src="../assets/brasao_perola.png"
+            alt="Brasão"
+        >
+
+
+        <div class="info-equipe">
+
+            <h1 id="nomeEquipeJogador">
+                PEROLA NEGRA
+            </h1>
+
+            <h2 id="pontuacao">
+                0 moedas
+            </h2>
+
+        </div>
+
+    </div>
+    <script
+        type="module"
+        src="map.js"
+    ></script>
+
+    <script
+        type="module"
+        src="cronometro.js"
+    ></script>
+
+    <script
+        type="module"
+        src="ranking.js"
+    ></script>
+
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100dvh;
+
+    background-image: url("../assets/tela_jogo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: white;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.tela-final {
+    width: 100%;
+    min-height: 100dvh;
+
+    padding: 25px 15px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgba(32, 12, 0, 0.40);
+}
+
+.titulo-final {
+    margin: 0;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 32px;
+
+    color: #f5d28a;
+
+    text-shadow:
+        3px 3px 3px #4c2f27,
+        -1px -1px 1px #000;
+
+    animation: aparecer 1s ease;
+}
+
+.subtitulo-final {
+    margin: 8px 0 18px;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 17px;
+
+    color: white;
+
+    text-shadow: 2px 2px 2px #4c2f27;
+
+    animation: aparecer 1.2s ease;
+}
+
+.vencedor {
+    width: min(600px, 95%);
+
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    background-image:
+        radial-gradient(
+            circle,
+            #E3C097 18%,
+            #BB9469
+        );
+
+    border: 4px solid #4c2f27;
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.45);
+
+    animation: subir 1s ease;
+}
+
+.brasao-vencedor {
+    width: 130px !important;
+    height: 130px !important;
+
+    min-width: 130px;
+    min-height: 130px;
+    object-fit: contain;
+
+    padding: 8px;
+
+    background-color: #1b0d06;
+
+    border: 5px solid #b8863b;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+.info-vencedor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-align: left;
+}
+
+.info-vencedor h1 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", Times, serif;
+
+    font-size: 28px;
+
+    color: white;
+
+    text-shadow:
+        2px 2px 2px #4c2f27;
+}
+
+.info-vencedor h2 {
+    margin: 8px 0 0;
+
+    font-size: 24px;
+
+    color: #fff;
+
+    text-shadow:
+        2px 2px 2px #4c2f27;
+}
+
+.participantes {
+    width: min(900px, 95%);
+
+    margin-top: 25px;
+
+    padding: 18px;
+
+    background-image:
+        radial-gradient(
+            circle,
+            #E3C097 18%,
+            #BB9469
+        );
+
+    border: 4px solid #4c2f27;
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.45);
+
+    animation: subir 1.2s ease;
+}
+
+.participantes > h2 {
+    margin: 0 0 18px;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", Times, serif;
+
+    font-size: 22px;
+
+    color: white;
+
+    text-shadow:
+        2px 2px 2px #4c2f27;
+}
+
+.jogadores-vencedores {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+}
+
+.jogador-vencedor {
+    width: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 8px;
+
+    background-color: rgba(32, 12, 0, 0.30);
+
+    border: 2px solid rgba(76, 47, 39, 0.8);
+
+    border-radius: 15px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.jogador-vencedor:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.35);
+}
+
+.jogador-vencedor img {
+    width: 85px;
+    height: 85px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #b8863b;
+
+    background-color: #1b0d06;
+}
+
+.jogador-vencedor h2 {
+    width: 100%;
+
+    margin: 8px 0 0;
+
+    font-size: 15px;
+
+    color: white;
+
+    text-align: center;
+
+    word-break: break-word;
+
+    text-shadow:
+        1px 1px 2px #000;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes subir {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .tela-final {
+        padding: 20px 10px 30px;
+    }
+
+    .titulo-final {
+        font-size: 26px;
+    }
+
+    .subtitulo-final {
+        font-size: 15px;
+    }
+
+    .vencedor {
+        width: 100%;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .brasao-vencedor {
+        width: 95px;
+        height: 95px;
+    }
+
+    .info-vencedor h1 {
+        font-size: 21px;
+    }
+
+    .info-vencedor h2 {
+        font-size: 19px;
+    }
+
+    .participantes {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .participantes > h2 {
+        font-size: 19px;
+    }
+
+    .jogadores-vencedores {
+        gap: 10px;
+    }
+
+    .jogador-vencedor {
+        width: 105px;
+    }
+
+    .jogador-vencedor img {
+        width: 75px;
+        height: 75px;
+    }
+
+}

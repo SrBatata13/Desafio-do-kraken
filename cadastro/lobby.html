@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="lobby.css">
+
+    <title>DESAFIO DO KRAKEN</title>
+</head>
+
+<body>
+
+    <h1>DESAFIO DO KRAKEN</h1>
+
+    <div class="container">
+
+        <!-- FOTO -->
+        <div class="foto-container">
+
+            <img
+                src="../assets/icon-pessoa.png"
+                alt="avatar"
+                class="foto-perfil"
+                id="preview"
+            >
+
+            <label for="upload">
+                <img
+                    src="../assets/icon-camera1.png"
+                    alt="icon da camera"
+                    class="camera-icon"
+                >
+            </label>
+
+            <input
+                type="file"
+                id="upload"
+                accept="image/*"
+            >
+
+        </div>
+
+
+        <!-- NOME -->
+        <div>
+
+            <label for="nome"></label>
+
+            <input
+                id="nome"
+                class="nome"
+                type="text"
+                name="nome"
+                placeholder="Digite seu NOME"
+                maxlength="30"
+                required
+            >
+
+        </div>
+
+
+        <!-- JOGAR -->
+        <div>
+
+            <button
+                id="btn-jogar"
+                class="btn-jogar"
+                disabled
+            >
+                JOGAR
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script
+        type="module"
+        src="lobby.js">
+    </script>
+
+</body>
+
+</html>
